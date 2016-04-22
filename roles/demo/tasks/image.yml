@@ -1,6 +1,8 @@
 ---
 - name: copy image to controller1
-  copy: src={{image_location}}{{image_name}} dest=/root/{{image_name}}
+  get_url:
+    url:  http://download.cirros-cloud.net/0.3.4/{{image_name}}
+    dest: /root/{{image_name}}
   tags: demo
   run_once: true
 

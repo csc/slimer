@@ -1,4 +1,4 @@
-#keystone_adminurl: "{{ keystone_auth_protocol }}://{{ keystone_vip }}:{{ keystone_auth_port }}/v2.0"
+keystone_adminurl: "{{ keystone_auth_protocol }}://{{ keystone_vip }}:{{ keystone_auth_port }}/v2.0"
 os_admin_auth: "--os-auth-url {{ keystone_adminurl}} --os-tenant-name {{admin_tenant}} --os-username {{admin_user }}  --os-password {{admin_pass}}"
 os_demo_auth: "--os-auth-url {{ keystone_adminurl}} --os-tenant-name {{demo_tenant}} --os-username {{demo_user }}  --os-password {{admin_pass}}"
 ext_gateway: "{{demo_ext_network | ipaddr('net') | ipaddr('1') | ipaddr('address')}}"

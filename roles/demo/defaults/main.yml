@@ -8,12 +8,11 @@ ext_net_name: external
 int_net_name: internal_net
 router_name: demo_router-1
 copy_image: True
-image_location: "/opt/autodeploy/resources/ISO/"
-image_name: rhel-guest-image-7.2-20160219.1.x86_64.qcow2
+image_name: cirros-0.3.4-x86_64-disk.img
 image_disk_format: qcow2
-image_short_name: rhel7.2
-image_root_password: redhat1234
+image_short_name: cirros
+image_root_password: "cubswin:)"
 
 #boot options
-nova_boot_flavor: m1.small
+nova_boot_flavor: m1.tiny
 nova_boot_name: test_vm
